@@ -1,0 +1,3 @@
+return {
+  network_interface = 'enp2s0'
+}

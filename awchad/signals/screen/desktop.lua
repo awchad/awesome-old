@@ -20,11 +20,23 @@ screen.connect_signal('request::desktop_decoration', function(screen)
     bg = beautiful.statusbar.background,
     fg = beautiful.statusbar.foreground,
     widget = {
-      layout = wibox.layout.align.horizontal,
       {
-        layout = wibox.layout.fixed.horizontal,
         screen.workspaces,
+        layout = wibox.layout.fixed.horizontal,
       },
+      nil,
+      {
+        widgets.system.kernel,
+        widgets.system.cpu,
+        widgets.system.physical_memory,
+        widgets.system.disk,
+        widgets.system.network,
+        widgets.system.packages,
+        widgets.system.date,
+        spacing = beautiful.system_widgets.spacing,
+        layout = wibox.layout.fixed.horizontal,
+      },
+      layout = wibox.layout.align.horizontal
     },
   })
 end)
