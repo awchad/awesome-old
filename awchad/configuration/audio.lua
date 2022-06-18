@@ -26,6 +26,7 @@ return {
       '-q',
       'sset',
       '$0',
+      'toggle'
     },
   },
 }
