@@ -21,7 +21,12 @@ screen.connect_signal('request::desktop_decoration', function(screen)
     fg = beautiful.statusbar.foreground,
     widget = {
       {
-        screen.workspaces,
+        {
+          screen.workspaces,
+          right = 16,
+          left = 16,
+          widget = wibox.container.margin
+        },
         layout = wibox.layout.fixed.horizontal,
       },
       nil,
